@@ -8,8 +8,8 @@
 var utag_data = {
   product_id : "", // Contains product ID(s) - multiple values should be comma-separated.
   product_sku : "", // Contains product SKU(s) - multiple values should be comma-separated.
-  product_name : "Desktop", // Contains product name(s) - multiple values should be comma-separated.
-  product_brand : "Mac", // Contains product brand(s) - multiple values should be comma-separated.
+  product_name : ["Desktop", "Laptop", "Tablet"]// Contains product name(s) - multiple values should be comma-separated.
+  product_brand : ["Mac", "HP", "Dell"]// Contains product brand(s) - multiple values should be comma-separated.
   product_category : "", // Contains product category(s) - multiple values should be comma-separated.
   product_subcategory : "", // Contains product subcategory(s) - multiple values should be comma-separated.
   product_unit_price : "", // Contains product unit price(s) - multiple values should be comma-separated.
@@ -28,7 +28,7 @@ var utag_data = {
   order_coupon_discount : "", // Contains the order coupon discount.
   order_store : "", // Contains identification information for a store.
   order_type : "", // Contains type of order/cart.
-  customer_id : "", // Contains the customer ID.
+  customer_id : "a123", // Contains the customer ID.
   customer_city : "", // Contains the customer city.
   customer_state : "", // Contains the customer state.
   customer_zip : "", // Contains the customer zip/postal code.
