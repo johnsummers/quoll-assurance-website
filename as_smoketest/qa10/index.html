@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<title>publish testing</title>
+<meta charset=UTF-8" />
+
+<style type="text/css">
+body{text-align:center;margin:0 auto;font-family: arial, verdana, sans-serif, FreeSans;font-size:12px;}
+#wrapper{width:1100px;text-align:left;position:relative;margin:0 auto;padding:10px 0 0 0;}publishtestdiv
+#leftcontainer{text-align:left;width:670px;overflow:hidden;display:inline;float:left;padding:15px 0 0 0;margin:0 0 0 5px;}
+p,div,form,h1,h2,h3{margin:0;padding:0;font-family:arial, verdana, sans-serif,FreeSans;font-size:12px;}
+.clear{clear:both;display:block;font-size:0;}.floatL{float:left;}.floatR{float:right;}
+a{text-decoration:none;color:#0055cc;}img{border:0px;}h1{font-size:20px;font-weight:normal}h2{font-size:16px;}h3{font-size:14px;}.ht15{display:block;height:15px;font-size:0;}
+.toprightlinks{float:right;font-size:11px;color:#999999;margin:8px 0 0 0;text-align:right;}.publishtestdiv{width:48%;display:inline;float:left;font-size:14px;margin:0 0 0 2px;}.publishtestdiv h3{margin:15px 0 0 0;}.greybar{background:#e5e5e5;height:3px;font-size:0;margin:10px 0 0 0;}.topadddiv{height:90px;_height:96px;background:#f6f5f5;border:solid 1px #f5f5f5;padding:3px 0;}
+.footer{border-top:solid 1px #D1D1D1;font-size:12px;clear:both;text-align:center;padding:10px 0;margin:25px 0 0 0;}
+</style>
+</head>
+<body bgcolor="#FFFFFF">
+
+<script type="text/javascript">
+var utag_data = {
+  page_name : "", // Contains a user-friendly name for the page.
+  page_section : "", // Contains a user-friendly page section, e.g. 'configuration section'.
+  page_category : "", // Contains a user-friendly page category, e.g. 'appliance page'.
+  page_subcategory : "", // Contains a user-friendly page subcategory, e.g. 'refrigerator page'.
+  page_type : "", // Contains a user-friendly page type, e.g. 'cart page'.
+  product_id : "", // Contains product ID(s) - multiple values should be comma-separated.
+  product_sku : "", // Contains product SKU(s) - multiple values should be comma-separated.
+  product_name : "", // Contains product name(s) - multiple values should be comma-separated.
+  product_brand : "", // Contains product brand(s) - multiple values should be comma-separated.
+  product_category : "", // Contains product category(s) - multiple values should be comma-separated.
+  product_subcategory : "", // Contains product subcategory(s) - multiple values should be comma-separated.
+  product_unit_price : "", // Contains product unit price(s) - multiple values should be comma-separated.
+  product_list_price : "", // Contains product list price(s) before discount - multiple values should be comma-separated.
+  product_quantity : "", // Contains product quantity(s) - multiple values should be comma-separated.
+  product_discount : "", // Contains product discount(s) - multiple values should be comma-separated.
+  order_id : "", // Contains the order or transaction ID.
+  order_total : "", // Contains the order total value.
+  order_subtotal : "", // Contains the order subtotal (not containing taxes &amp; shipping).
+  order_payment_type : "", // Contains the order payment type.
+  order_discount : "", // Contains the order discount (if any).
+  order_shipping : "", // Contains the order shipping value.
+  order_tax : "", // Contains the order tax amount.
+  order_currency : "", // Contains the currency associated with the transaction, e.g. 'USD'.
+  order_coupon_code : "", // Contains the order coupon code.
+  order_coupon_discount : "", // Contains the order coupon discount.
+  order_store : "", // Contains identification information for a store.
+  order_type : "", // Contains type of order/cart.
+  customer_id : "", // Contains the customer ID.
+  customer_city : "", // Contains the customer city.
+  customer_state : "", // Contains the customer state.
+  customer_zip : "", // Contains the customer zip/postal code.
+  customer_country : "", // Contains the customer country.
+  customer_email : "", // Contains the customer email.
+  customer_type : "" // Contains the customer type.
+}
+</script>
+
+<!-- Loading script asynchronously -->
+<script type="text/javascript">
+    (function(a,b,c,d){
+    a='//tags.tiqcdn.com/qa10/nt-test-20150714/as-smoketest/prod/utag.js';
+    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+    })();
+</script>
+
+    
+
+<div id="wrapper">
+<div class="floatL">&nbsp;<h1><b><a href="http://www.tealium.com"><font face="GENEVA">TEALIUM QUALITY ASSURANCE WEBSITE </font></b></h1>&nbsp</div>
+<div class="toptabsdiv">&nbsp;</div>
+<div class="toprightlinks"></div>
+<span class="clear"></span>
+<div class="greybar"></div><br>
+
+<div class="publishtestdiv"> 
+	<h2><a href="qaservers.html"> <b>Publish Testing </b></a></h2><br>
+	<p>Test the Publish engine using this test page.Publish generates number of utag files.The most important is the utag.js which is the core process.This is the important file for tagging to work.For each active tag, there will a utag.*.js which will be loaded. There are also other utag files such as utag.footer and utag.sub. All these files are accessible to this test page. Also check the tag loading adding with Load rules, mapping data sources and extensions</p><br><br><br>
+  
+	<h2><a href="qaservers.html"> <b>Webcompanion Testing </b></a></h2><br>
+	<p>Use this test page for testing Web companion. Usually web companion doesn't load when the profile data is not up-to-date with the production data. Advantage of using this test page is, web companion will be loaded with any data on the profile. It is not necessary that it has to be exact match with production data. Load web companion on this page & add data to the test profile. </p><br><br><br>
+	
+	<h2><a href="qaservers.html"> <b>Privacy Manager Extension Testing </b></a></h2><br>
+	<p>The Multi-Opt out widget displayed on the test page will be useful for privacy Manager testing. Here you can easily modify tealium opt-out settings.Add Privacy Manger extension on a test profile. Also setup the correct widget Id on the UI. Choose opt method as 'Opted out by default'& Visitor selection type as 'by Category' on the extensions settings. Modify and test the privacy options using this widget.</p><br><br><br>
+	
+	<h2><a href="qaservers.html"> <b>ServerToServer Testing </b></a></h2><br>
+	<p> There are tags that fires on server side. Add  serverToServer tags on a profile.Enable Server to Server option on the UI. Use this test page to make sure these tags are not loading/firing on the browser side. Also test the non ServerToServer tag loading on the client side. Rocket Fuel, Tealium Event stream, SiteCatalyst Mobile App are some of the ServerToServer tags. </p><br><br><br>
+	
+	<h2><a href="qaservers.html"> <b>Additional Testing </b></a></h2><br>
+	<p> Use these test pages for testing any other addition test on QA.</p><br><br>
+	
+	<div class="greybar"></div><br>
+	<div class="site-footer-links">
+         <a href="qaservers.html">PublishTesting</a> &nbsp 
+         <a href="qaservers.html">WebcompanionTesting</a> &nbsp 
+         <a href="qaservers.html">PrivacyManagerTesting</a> &nbsp 
+         <a href="qaservers.html">ServerToServerTesting</a> &nbsp 
+    </div>
+	</div>
+	</div>
+
+<div>
+<h2> <br> <br> <br> <br> <br> <br> <br> <font color="#493D26">Links </font></h2><br>
+<li><a href="qaservers.html"> Publish process Testing</a> </li>
+<li><a href="qaservers.html">Webcompanion Testing</a> </li>
+<li><a href="qaservers.html">PrivacyManager Testing</a> </li>
+<li><a href="qaservers.html">ServerToServer Testing</a> </li> <br> <br><br>
+
+<h2> <br> <font color="#493D26"> QA Servers </font></h2><br>
+<li><a href="http://QA1-my.tealiumiq.com"> QA1-my.tealiumiq.com</a> </li>
+<li><a href="http://QA3-my.tealiumiq.com">QA3-my.tealiumiq.com</a> </li>
+<li><a href="http://QA4-my.tealiumiq.com">QA4-my.tealiumiq.com</a> </li>
+<li><a href="http://QA5-my.tealiumiq.com">QA5-my.tealiumiq.com</a> </li> 
+<li><a href="http://QA6-my.tealiumiq.com">QA6-my.tealiumiq.com</a> </li>
+<li><a href="http://QA7-my.tealiumiq.com">QA6-my.tealiumiq.com</a> </li>
+<li><a href="http://QA8-my.tealiumiq.com">QA8-my.tealiumiq.com</a> </li><br> <br>
+</div>
