@@ -1,25 +1,28 @@
 <html>
 <head>
-  <title>Sample HTML Page</title>
+  <title>QA24 Regression - Home Page</title>
 </head>
 <body>
 
 <script type="text/javascript">
 var utag_data = {
-  page_name : "", // Contains a user-friendly name for the page.
-  page_section : "", // Contains a user-friendly page section, e.g. 'configuration section'.
+  page_name : "Home Page", // Contains a user-friendly name for the page.
+  page_section : "Section 1", // Contains a user-friendly page section, e.g. 'configuration section'.
   page_category : "", // Contains a user-friendly page category, e.g. 'appliance page'.
   page_subcategory : "", // Contains a user-friendly page subcategory, e.g. 'refrigerator page'.
-  page_type : "", // Contains a user-friendly page type, e.g. 'cart page'.
-  customer_id : "Customer_id", // Contains the customer's ID.
-  customer_username : "test", // Contains the customer's username, e.g. johndoe38.
+  page_type : "Home Landing Page", // Contains a user-friendly page type, e.g. 'cart page'.
+  customer_id : "", // Contains the customer's ID.
+  customer_username : "", // Contains the customer's username, e.g. johndoe38.
   customer_status : "", // Contains the customer's status, e.g. 'logged in'.
   customer_type : "", // Contains the customer's type, e.g. 'bronze member'.
   customer_email : "", // Contains the customer's email.
-  customer_city : "123NewOLDabc", // Contains the city portion of the customer's address.
-  customer_state : "", // Contains the city portion of the customer's address.
-  customer_zip : "44554", // Contains the city portion of the customer's address.
-  customer_country : "", // Contains the city portion of the customer's address.
+  customer_city : "", // Contains the city portion of the customer's address.
+  customer_state : "", // Contains the state portion of the customer's address.
+  customer_zip : "", // Contains the zip code portion of the customer's address.
+  customer_country : "", // Contains the country portion of the customer's address.
+  search_term : "", // Contains the search term or query submitted by a visitor.
+  search_results : "", // Contains the number of results returned with a search query.
+  search_type : "", // Contains the type of search conducted by the visitor.
   product_id : "", // Contains product ID(s) - multiple values should be comma-separated.
   product_sku : "", // Contains product SKU(s) - multiple values should be comma-separated.
   product_name : "", // Contains product name(s) - multiple values should be comma-separated.
@@ -41,14 +44,35 @@ var utag_data = {
   order_coupon_code : "", // Contains the order coupon code.
   order_coupon_discount : "", // Contains the order coupon discount.
   order_store : "", // Contains identification information for a store.
-  order_type : "" // Contains type of order/cart.
+  order_type : "", // Contains type of order/cart.
+  site_region : "en_US", // Contains values for the region or localized version, e.g. 'en_US'.
+  site_currency: "USD",
+  site_language: "English",
+  article_id : "", // Contains the article's ID.
+  article_name : "", // Contains the article's name.
+  article_author : "", // Contains the name of the author of an article.
+  article_publish_date : "", // Contains the publish date of an article.
+  video_id : "", // Contains the video ID.
+  video_name : "", // Contains the name of the video.
+  video_duration : "", // Contains the duration of the video. This value should be in seconds.
+  video_offset : "", // Contains the time into a video at which a certain state occurs.
+  video_state : "", // Contains the state of the video, e.g. start, play, pause, milestone, end.
+  video_player : "", // Contains the name of the video player.
+  video_player_version : "", // Contains the version of the video player.
+  event_type : "", // Contains the event type, e.g. link click', 'button click').
+  event_target : "", // Contains the name associated with an interactive element (link, button, etc).
+  event_attr1 : false, // Contains custom attribute 1 associated with an event.
+  event_attr2 : false, // Contains custom attribute 2 associated with an event.
+  event_attr3 : false, // Contains custom attribute 3 associated with an event.
+  event_attr4 : false, // Contains custom attribute 4 associated with an event.
+  _dc_ttl_: "60000" //Force Visitors to Expire in a < 2 minutes
 }
 </script>
 
 <!-- Loading script asynchronously -->
 <script type="text/javascript">
     (function(a,b,c,d){
-    a='//tags.tiqcdn.com/utag/tealium-nt/test-profile-shalini/prod/utag.js';
+    a='//tags.tiqcdn.com/qa24/qa-audiencestream/regression/prod/utag.js';
     b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
     a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
     })();
@@ -71,6 +95,15 @@ looking at the navigation on the left. (Dev, QA, Prod)</li>
     <li> Navigate to the appropriate webpage, and paste 
 the code after the opening BODY tag.</li>
 </ol>
+
+
+<a href="home.html">HOME</a><br/>
+<a href="productcategory.html">PRODUCT CATEGORY</a><br/>
+<a href="productdetail.html">PRODUCT DETAIL</a><br/>
+<a href="cart.html">CART</a><br/>
+<a href="confirmation.html">CONFIRMATION</a><br/>
+
+
 
 </body>
 </html>    
