@@ -22,7 +22,7 @@
       </style>
    </head>
    <body>
-         <script type="text/javascript">var vars = [], hash;</script>
+         <script type="text/javascript">var vars = [], hash; var show_teal = false;</script>
          <script type="text/javascript">
             var q = document.URL.split('?')[1];
             var header_text = "Undefined";
@@ -73,24 +73,13 @@
          var variation = vars['variation'];
          if (variation != undefined){
          	switch (variation) {
-         		case 'string_arrays':
-         		   utag_data.product_unit_price = ["23.99", "17.85", "18.50", "24.00", "14.99"];
-         		   utag_data.product_quantity = ["2", "1", "4", "1", "3"];
+         		case 'float_values':
+          		   utag_data.product_unit_price = "23.994,17.850,18.50,23.996,14.992";
+         		   utag_data.product_quantity = "2.0,1.000,4.00,1.00,3.000";
          		   break;
-         		case 'float_arrays':
-          		   utag_data.product_unit_price = [23.99, 17.85, 18.50, 24.00, 14.99];
-         		   utag_data.product_quantity = [2.00, 1.000, 4.0, 1.00, 3.0];
+          		case 'integer_values':
+          		   utag_data.product_unit_price = "23,18,19,24,15";
          		   break;
-          		case 'integer_arrays':
-          		   utag_data.product_unit_price = [24, 18, 19, 24, 15];
-         		   utag_data.product_quantity = [2, 1, 4, 1, 3];
-         		   break;
-          		case 'empty':
-          		   utag_data.product_id = "";
-          		   utag_data.product_unit_price = "";
-         		   utag_data.product_quantity = "";
-         		   break;
-        		
          	}
          }
       </script>
@@ -121,6 +110,7 @@
             		switch (extensionname) {
             			case 'javascript_code':
             				header_text = "Javascript Code";
+            				show_teal = true;
             				break;
             			case 'set_data_values':
             				header_text = "Set Data Values";
@@ -133,7 +123,8 @@
             				break;
             			case 'jquery_onhandler':
             				header_text = "JQuery OnHandler (1.7 and above)";
-            				break;
+             				show_teal = true;
+           				break;
             			default:
             				header_text = "Undefined";
             		}
@@ -142,13 +133,14 @@
             $( "#test-header" ).html( " Extension: " + header_text);
          </script>
       </div>
-      <table class="tg">
+      <table id="teal-chrome" class="tg">
          <tr>
-            <th class="tg-panel-one">T</th>
-            <th class="tg-panel-two">E</th>
-            <th class="tg-panel-three">A</th>
-            <th class="tg-panel-four">L</th>
+            <th id="chrome-one" class="tg-panel-one">T</th>
+            <th id="chrome-two"class="tg-panel-two">E</th>
+            <th id="chrome-three"class="tg-panel-three">A</th>
+            <th id="chrome-four"class="tg-panel-four">L</th>
          </tr>
       </table>
+      <script>if(show_teal) { $("#teal-chrome").show(); } else { $("#teal-chrome").hide(); } </script>
    </body>
 </html>
