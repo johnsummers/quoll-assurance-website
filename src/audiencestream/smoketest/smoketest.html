@@ -2,7 +2,7 @@
 <html lang="us">
    <head>
       <meta charset="utf-8">
-      <title>Extension Test</title>
+      <title>AS Smoke Test</title>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script>
          $(function() {
@@ -10,7 +10,12 @@
       </script>
       <script type="text/javascript"></script>
       <style type="text/css">
-         p,div,form,h1,h2,h3{margin:10;padding:0;font-family:arial, verdana, sans-serif,FreeSans;}
+         p,div,form,h1,h2,h3{margin:10;padding:5;font-family:arial, verdana, sans-serif,FreeSans;}
+         a{text-decoration:none;color:#0055cc;}img{border:0px;}
+         h1{font-size:30px;}
+         h2{font-size:16px;}
+         h3{font-size:14px;}
+         .ht15{display:block;height:15px;font-size:0;}
          .clear{clear:both;display:block;font-size:0;}.floatL{float:left;}.floatR{float:right;}
          .tg  {border-collapse:collapse;border-spacing:0;}
          .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 20px;border-style:solid;border-width:2px;overflow:hidden;word-break:normal;}
@@ -92,21 +97,15 @@
          })();
       </script>
       <div id="mainDiv">
-         <div id="test-title" class="hBox" style="background-color: teal; color: white; text-indent: 50px; line-height: 1.8; font-size: 30px;"></div>
-         <p>This is a test</p>
+         <div id="test-banner" class="hBox" style="background-color: teal; color: white; text-indent: 50px; line-height: 1.8; font-size: 30px;"></div>
          <div class="textBox">
             <h1 id="test-header"></h1>
-            <p id="test-path">Test page for : audiencestream/smoketest</p>
+            <p id="test-path">Test page for audiencestream/smoketest</p>
             <span id="cmod"></span>
          </div>
-         <div id="text-one"></div>
-         <div id="text-two"></div>
-         <div id="text-three"></div>
-         <div id="text-four"></div>
-         <div id="text-five"></div>
          <script type="text/javascript">
-            $( "#test-title" ).html( environment.toUpperCase() + " - AS Smoke Test" );
-            $( "#test-header" ).html( " Audience Stream Smoke Test running on " + environment.toLowerCase());
+            $( "#test-banner" ).html( environment.toUpperCase() + " - AS Smoke Test" );
+            $( "#test-header" ).html( "HOME Page - " + environment.toUpperCase());
          </script>
       </div>
    </body>
