@@ -40,7 +40,7 @@
             product_id : "005", // Contains product ID(s) - multiple values should be comma-separated.
          	product_sku : "", // Contains product SKU(s) - multiple values should be comma-separated.
          	product_name : "Dark Beer", // Contains product name(s) - multiple values should be comma-separated.
-         	product_brand : "Cigar City Brewing", // Contains product brand(s) - multiple values should be comma-separated.
+         	product_brand : "", // Contains product brand(s) - multiple values should be comma-separated.
          	product_category : "beer", // Contains product category(s) - multiple values should be comma-separated.
          	product_subcategory : "good beer", // Contains product subcategory(s) - multiple values should be comma-separated.
          	product_unit_price : "23.99,17.85,18.50,24.00,14.99", // Contains product unit price(s) - multiple values should be comma-separated.
@@ -54,8 +54,8 @@
          	order_discount : "", // Contains the order discount (if any).
          	order_shipping : "", // Contains the order shipping value.
          	order_tax : "", // Contains the order tax amount.
-         	order_currency : "", // Contains the currency associated with the transaction, e.g. 'USD'.
-         	order_coupon_code : "", // Contains the order coupon code.
+         	order_currency : "USD", // Contains the currency associated with the transaction, e.g. 'USD'.
+         	order_coupon_code : "XKDSJFSLKS", // Contains the order coupon code.
          	order_coupon_discount : "", // Contains the order coupon discount.
          	order_store : "", // Contains identification information for a store.
          	order_type : "", // Contains type of order/cart.
@@ -79,6 +79,10 @@
          		   break;
           		case 'integer_values':
           		   utag_data.product_unit_price = "23,18,19,24,15";
+         		   break;
+         		case 'strings_with_spaces':
+          		   utag_data.product_unit_price = "23.99, 17.85, 18.50, 24.00, 14.99";
+         		   utag_data.product_quantity = "2, 1, 4, 1, 3";
          		   break;
          	}
          }
