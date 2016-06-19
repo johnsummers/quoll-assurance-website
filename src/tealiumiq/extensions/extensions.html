@@ -103,19 +103,26 @@
             <p id="test-path">Test page for : tealiumiq/extensions</p>
             <span id="cmod"></span>
          </div>
-         <div id="text-one"></div>
-         <div id="text-two"></div>
-         <div id="text-three"></div>
-         <div id="text-four"></div>
-         <div id="text-five"></div>
+       <table id="teal-chrome" class="tg">
+         <tr>
+            <th id="chrome-one" class="tg-panel-one">T</th>
+            <th id="chrome-two"class="tg-panel-two">E</th>
+            <th id="chrome-three"class="tg-panel-three">A</th>
+            <th id="chrome-four"class="tg-panel-four">L</th>
+         </tr>
+      </table>
+        <p id="text-one"></p>
+         <p id="text-two"></p>
+         <p id="text-three"></p>
+         <p id="text-four"></p>
+         <p id="text-five"></p>
          <script type="text/javascript">
             	var extensionname = vars['extension'];
             	if(extensionname != undefined){
             		switch (extensionname) {
             			case 'javascript_code':
             				header_text = "Javascript Code";
-            				show_teal = true;
-            				break;
+             				break;
             			case 'set_data_values':
             				header_text = "Set Data Values";
             				break;
@@ -128,6 +135,7 @@
             			case 'jquery_onhandler':
             				header_text = "JQuery OnHandler (1.7 and above)";
              				show_teal = true;
+             				$('#text-one').html('\"You\'re soaking in it.\"');
            				break;
             			default:
             				header_text = "Undefined";
@@ -137,14 +145,6 @@
             $( "#test-header" ).html( " Extension: " + header_text);
          </script>
       </div>
-      <table id="teal-chrome" class="tg">
-         <tr>
-            <th id="chrome-one" class="tg-panel-one">T</th>
-            <th id="chrome-two"class="tg-panel-two">E</th>
-            <th id="chrome-three"class="tg-panel-three">A</th>
-            <th id="chrome-four"class="tg-panel-four">L</th>
-         </tr>
-      </table>
       <script>if(show_teal) { $("#teal-chrome").show(); } else { $("#teal-chrome").hide(); } </script>
    </body>
 </html>
