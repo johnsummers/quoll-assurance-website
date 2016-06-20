@@ -19,22 +19,27 @@
          .tg .tg-panel-two{background-color:#17d6bc;color:#109c83;vertical-align:top}
          .tg .tg-panel-three{background-color:#109c83;color:#17d6bc;vertical-align:top}
          .tg .tg-panel-four{background-color:#095e56;color:#1df9d2;vertical-align:top}
+         .container {width: 300px;height: 100px; position: absolute; left: 50%; top: 50%;
+         margin-left: -150px; /* Half of width */
+         margin-top: -50px;    /* Half of height */}
+         .left{float: left;width: 150px;}
+         .right {float: right;width: 150px;}
       </style>
    </head>
    <body>
-         <script type="text/javascript">var vars = [], hash; var show_teal = false;</script>
-         <script type="text/javascript">
-            var q = document.URL.split('?')[1];
-            var header_text = "Undefined";
-            if(q != undefined){
-            	q = q.split('&');
-            	for(var i = 0; i < q.length; i++){
-            		hash = q[i].split('=');
-            		vars.push(hash[1]);
-            		vars[hash[0]] = hash[1];
-            	}
-            }
-         </script>
+      <script type="text/javascript">var vars = [], hash; var show_teal = false;</script>
+      <script type="text/javascript">
+         var q = document.URL.split('?')[1];
+         var header_text = "Undefined";
+         if(q != undefined){
+         	q = q.split('&');
+         	for(var i = 0; i < q.length; i++){
+         		hash = q[i].split('=');
+         		vars.push(hash[1]);
+         		vars[hash[0]] = hash[1];
+         	}
+         }
+      </script>
       <script type="text/javascript">
          var utag_data = {
             product_id : "005", // Contains product ID(s) - multiple values should be comma-separated.
@@ -103,48 +108,57 @@
             <p id="test-path">Test page for : tealiumiq/extensions</p>
             <span id="cmod"></span>
          </div>
-       <table id="teal-chrome" class="tg">
-         <tr>
-            <th id="chrome-one" class="tg-panel-one">T</th>
-            <th id="chrome-two"class="tg-panel-two">E</th>
-            <th id="chrome-three"class="tg-panel-three">A</th>
-            <th id="chrome-four"class="tg-panel-four">L</th>
-         </tr>
-      </table>
-        <p id="text-one"></p>
-         <p id="text-two"></p>
-         <p id="text-three"></p>
-         <p id="text-four"></p>
-         <p id="text-five"></p>
+         <table id="teal-chrome" class="tg">
+            <tr>
+               <th id="chrome-one" class="tg-panel-one">T</th>
+               <th id="chrome-two"class="tg-panel-two">E</th>
+               <th id="chrome-three"class="tg-panel-three">A</th>
+               <th id="chrome-four"class="tg-panel-four">L</th>
+            </tr>
+         </table>
+         <div id="text-panel">
+            <p id="text-one"></p>
+            <p id="text-two"></p>
+            <p id="text-three"></p>
+            <p id="text-four"></p>
+            <p id="text-five"></p>
+         </div>
          <script type="text/javascript">
-            	var extensionname = vars['extension'];
-            	if(extensionname != undefined){
-            		switch (extensionname) {
-            			case 'javascript_code':
-            				header_text = "Javascript Code";
-             				break;
-            			case 'set_data_values':
-            				header_text = "Set Data Values";
+            var extensionname = vars['extension'];
+            if(extensionname != undefined){
+            	switch (extensionname) {
+            		case 'javascript_code':
+            			header_text = "Javascript Code";
             				break;
-            			case 'lookup_table':
-            				header_text = "Lookup Table";
-            				break;
-            			case 'e_commerce':
-            				header_text = "E-Commerce";
-            				break;
-            			case 'jquery_onhandler':
-            				header_text = "JQuery OnHandler (1.7 and above)";
-             				show_teal = true;
-             				$('#text-one').html('\"You\'re soaking in it.\"');
-           				break;
-            			default:
-            				header_text = "Undefined";
-            		}
+            		case 'set_data_values':
+            			header_text = "Set Data Values";
+            			break;
+            		case 'lookup_table':
+            			header_text = "Lookup Table";
+            			break;
+            		case 'e_commerce':
+            			header_text = "E-Commerce";
+            			break;
+            		case 'jquery_onhandler':
+            			header_text = "JQuery OnHandler (1.7 and above)";
+            				show_teal = true;
+            				$('#text-one').html('\"You\'re soaking in it.\"');
+            		break;
+            		default:
+            			header_text = "Undefined";
             	}
+            }
             $( "#test-title" ).html( header_text + " Extension" );
             $( "#test-header" ).html( " Extension: " + header_text);
          </script>
+         <div class="container">
+            <div class="left">
+            </div>
+            <div class="right">
+            </div>
+         </div>
       </div>
       <script>if(show_teal) { $("#teal-chrome").show(); } else { $("#teal-chrome").hide(); } </script>
+      <script type="text/javascript">$("#text-panel").hide();</script>
    </body>
 </html>
