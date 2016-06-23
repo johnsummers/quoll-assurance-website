@@ -10,7 +10,7 @@
       </script>
       <script type="text/javascript"></script>
       <style type="text/css">
-         p,div,form,h1,h2,h3{margin:10;padding:0;font-family:arial, verdana, sans-serif,FreeSans;}
+         p,div,form,h1,h2,h3{margin:0px;padding:5px;font-family:arial, verdana, sans-serif,FreeSans;}
          .clear{clear:both;display:block;font-size:0;}.floatL{float:left;}.floatR{float:right;}
          .tg  {border-collapse:collapse;border-spacing:0;}
          .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 20px;border-style:solid;border-width:2px;overflow:hidden;word-break:normal;}
@@ -19,11 +19,19 @@
          .tg .panel-two{background-color:#17d6bc;color:#109c83;vertical-align:top}
          .tg .panel-three{background-color:#109c83;color:#17d6bc;vertical-align:top}
          .tg .panel-four{background-color:#095e56;color:#1df9d2;vertical-align:top}
-         .container {width: 300px;height: 100px; position: absolute; left: 50%; top: 50%;
-         margin-left: -150px; /* Half of width */
-         margin-top: -50px;    /* Half of height */}
+         .container {width: 300px;height: 100px; position: static;}
          .left{float: left;width: 150px;}
          .right {float: right;width: 150px;}
+         .button {background-color: #4CAF50; /* Green */
+                  border: 2px solid #4CAF50;
+                  border-radius: 8px;
+                  color: white;
+                  padding: 15px 32px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 20px;
+                  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);}
       </style>
    </head>
    <body>
@@ -123,13 +131,19 @@
             <p id="text-four"></p>
             <p id="text-five"></p>
          </div>
+         <div id="alice" class="container">
+            <div class="left">
+            </div>
+            <div class="right">
+            </div>
+         </div>
          <script type="text/javascript">
             var extensionname = vars['extension'];
             if(extensionname != undefined){
             	switch (extensionname) {
             		case 'javascript_code':
             			header_text = "Javascript Code";
-            				break;
+            			break;
             		case 'set_data_values':
             			header_text = "Set Data Values";
             			break;
@@ -142,7 +156,6 @@
             		case 'jquery_onhandler':
             			header_text = "JQuery OnHandler (1.7 and above)";
             				show_teal = true;
-            				$('#text-one').html('\"You\'re soaking in it.\"');
             		break;
             		default:
             			header_text = "Undefined";
@@ -151,12 +164,6 @@
             $( "#test-title" ).html( header_text + " Extension" );
             $( "#test-header" ).html( " Extension: " + header_text);
          </script>
-         <div class="container">
-            <div class="left">
-            </div>
-            <div class="right">
-            </div>
-         </div>
       </div>
       <script>if(show_teal) { $("#teal-chrome").show(); } else { $("#teal-chrome").hide(); } </script>
       <script type="text/javascript">$("#text-panel").hide();</script>
