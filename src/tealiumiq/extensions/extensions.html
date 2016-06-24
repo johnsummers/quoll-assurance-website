@@ -132,12 +132,46 @@
             <p id="text-four"></p>
             <p id="text-five"></p>
          </div>
+         <script type="text/javascript">
+            // 
+            //   Add focus styling to the parent (LI) element of the radio button receiving focus 
+            // 
+            function radioFocus( event ) { 
+              // Get event object  if using Internet Explorer 
+              var e = event || window.event; 
+      
+              // Check the object for W3C DOM event object, if not use IE event object to update the class of the parent element 
+              if( e.target ) 
+                 e.target.parentNode.className = "focus"; 
+              else 
+                 e.srcElement.parentNode.className = "focus"; 
+      
+           } 
+   
+           // 
+           //   Remove focus styling from the parent (LI) element of the radio button receiving focus 
+           // 
+           function radioBlur( event ) { 
+              // Get event object  if using Internet Explorer 
+              var e = event || window.event; 
+      
+              var node; 
+      
+              // Check the object for W3C DOM event object, if not use IE event object to update the class of the parent element 
+              if( e.target ) 
+                 e.target.parentNode.className = ""; 
+              else 
+                 e.srcElement.parentNode.className = ""; 
+   
+           } 
+     
+</script>
          <div id="alice" class="container">
             <div class="left">
-            <input id="rabbit" type="radio" name="alice" onclick="check(this.value)" value="rabbit" checked>Follow the white rabbit<br>
-            <input id="drink" type="radio" name="alice" onclick="check(this.value)" value="drink">Drink Me<br>
-            <input id="eat" type="radio" name="alice" onclick="check(this.value)" value="eat">Eat Me<br>
-            <input id ="red-queen" type="radio" name="alice" onclick="check(this.value)" value="red-queen">Off with her head!!<br>
+            <input id="rabbit" type="radio" name="alice" onfocus="radioFocus(event)" onblur="radioBlur(event)" value="rabbit" checked="checked"/>Follow the white rabbit<br>
+            <input id="drink" type="radio" name="alice" onfocus="radioFocus(event)" onblur="radioBlur(event)" value="drink" />Drink Me<br>
+            <input id="eat" type="radio" name="alice" onfocus="radioFocus(event)" onblur="radioBlur(event)" value="eat" />Eat Me<br>
+            <input id ="red-queen" type="radio" name="alice" onfocus="radioFocus(event)" onblur="radioBlur(event)" value="red-queen" />Off with her head!!<br>
 
             </div>
             <div class="right">
