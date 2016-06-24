@@ -19,9 +19,9 @@
          .tg .panel-two{background-color:#17d6bc;color:#109c83;vertical-align:top}
          .tg .panel-three{background-color:#109c83;color:#17d6bc;vertical-align:top}
          .tg .panel-four{background-color:#095e56;color:#1df9d2;vertical-align:top}
-         .container {width: 300px;height: 100px; position: static;}
-         .left{float: left;width: 150px;}
-         .right {float: right;width: 150px;}
+         .container {width: 1280px;height: 480px; position: static;}
+         .left{float: left;width: 200px;vertical-align:center}
+         .right {float: none;width: 640px;}
          .button {background-color: #4CAF50; /* Green */
                   border: 2px solid #4CAF50;
                   border-radius: 8px;
@@ -32,6 +32,7 @@
                   display: inline-block;
                   font-size: 20px;
                   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);}
+         .image{float:left;}
       </style>
    </head>
    <body>
@@ -133,8 +134,14 @@
          </div>
          <div id="alice" class="container">
             <div class="left">
+            <input id="rabbit" type="radio" name="alice" onclick="check(this.value)" value="rabbit" checked>Follow the white rabbit<br>
+            <input id="drink" type="radio" name="alice" onclick="check(this.value)" value="drink">Drink Me<br>
+            <input id="eat" type="radio" name="alice" onclick="check(this.value)" value="eat">Eat Me<br>
+            <input id ="red-queen" type="radio" name="alice" onclick="check(this.value)" value="red-queen">Off with her head!!<br>
+
             </div>
             <div class="right">
+            	<img id="alice-image" style="display: inline; margin: 0 5px;" src = "alice_rabbit_sm.jpg" alt="" />
             </div>
          </div>
          <script type="text/javascript">
@@ -155,7 +162,7 @@
             			break;
             		case 'jquery_onhandler':
             			header_text = "JQuery OnHandler (1.7 and above)";
-            				show_teal = true;
+            			show_teal = true;
             		break;
             		default:
             			header_text = "Undefined";
