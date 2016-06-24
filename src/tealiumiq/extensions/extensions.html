@@ -109,12 +109,6 @@
          	a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
          })();
       </script>
-      <script type="text/javascript">
-         function clickQueen(){
-         	document.getElementById('red-queen').focus();
-         	document.getElementById('text-one').hide();
-         }
-      </script>
       <div id="mainDiv">
          <div id="test-title" class="hBox" style="background-color: teal; color: white; text-indent: 50px; line-height: 1.8; font-size: 30px;"></div>
          <p>This is a test</p>
@@ -180,5 +174,11 @@
       </div>
       <script>if(show_teal) { $("#teal-chrome").show(); } else { $("#teal-chrome").hide(); } </script>
       <script type="text/javascript">$("#text-panel").hide();</script>
+      <script type="text/javascript">
+         function clickQueen(){
+         	document.getElementById('red-queen').focus();
+         	$('#text-one').hide();
+         }
+      </script>
    </body>
 </html>
