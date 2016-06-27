@@ -203,6 +203,7 @@
             }
             $( "#test-title" ).html( header_text + " Extension" );
             $( "#test-header" ).html( " Extension: " + header_text);
+            $('input:radio[name="alice"]').filter('[value="rabbit"]').prop('checked', true);
          </script>
       </div>
       <script>if(show_teal) { $("#teal-chrome").show(); } else { $("#teal-chrome").hide(); } </script>
@@ -217,6 +218,7 @@
             document.getElementById('red-queen').focus();
             $("#text-one").hide();
          }
+
       </script>
    </body>
 </html>
