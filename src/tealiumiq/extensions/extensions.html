@@ -161,8 +161,8 @@
             $('input:radio[name="alice"]').filter('[value="rabbit"]').prop('checked', true);
          </script>
       </div>
-      <script>if(show_teal) { $("#teal-chrome").show(); } else { $("#teal-chrome").hide(); } </script>
-      <script type="text/javascript">$("#text-one").html('\"The quicker picker upper.\"'); $("#alice").hide();</script>
+      <script>if(show_teal) { $("#teal-chrome").show(); $("#text-panel").show(); $("#text-one").html('\"The quicker picker upper.\"');} else { $("#teal-chrome").hide();  $("#text-panel").hide();} </script>
+      <script type="text/javascript">$("#alice").hide();</script>
       <script type="text/javascript">
          function clickRabbit() {
          	document.getElementById('rabbit').focus();
