@@ -22,17 +22,6 @@
          .container {width: 950px;height: 480px; position: static;}
          .left{float: left;width: 640px;vertical-align:center}
          .right {float: left;width: 210px;}
-         .button {background-color: #4CAF50; /* Green */
-                  border: 2px solid #4CAF50;
-                  border-radius: 8px;
-                  color: white;
-                  padding: 15px 32px;
-                  text-align: center;
-                  text-decoration: none;
-                  display: inline-block;
-                  font-size: 20px;
-                  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);}
-         .image{float:left;}
       </style>
    </head>
    <body>
@@ -132,40 +121,6 @@
             <p id="text-four"></p>
             <p id="text-five"></p>
          </div>
-         <script type="text/javascript">
-            // 
-            //   Add focus styling to the parent (LI) element of the radio button receiving focus 
-            // 
-            function radioFocus( event ) { 
-              // Get event object  if using Internet Explorer 
-              var e = event || window.event; 
-      
-              // Check the object for W3C DOM event object, if not use IE event object to update the class of the parent element 
-              if( e.target ) 
-                 e.target.parentNode.className = "focus"; 
-              else 
-                 e.srcElement.parentNode.className = "focus"; 
-      
-           } 
-   
-           // 
-           //   Remove focus styling from the parent (LI) element of the radio button receiving focus 
-           // 
-           function radioBlur( event ) { 
-              // Get event object  if using Internet Explorer 
-              var e = event || window.event; 
-      
-              var node; 
-      
-              // Check the object for W3C DOM event object, if not use IE event object to update the class of the parent element 
-              if( e.target ) 
-                 e.target.parentNode.className = ""; 
-              else 
-                 e.srcElement.parentNode.className = ""; 
-   
-           } 
-     
-         </script>
          <div id="alice" class="container">
             <div class="left">
             	<img id="alice-image" style="display: inline; margin: 0 5px;" src = "alice_rabbit_sm.jpg" alt="" >
