@@ -44,11 +44,14 @@
       <script type="text/javascript">
          var env_query = vars['environment'];
          if (env_query != undefined) {
-            environment = env_query;
+            environment = env_query.toLowerCase();
          } else {
             environment = "Undefined";
          }
-         as_url = "//tags.tiqcdn.com/" + environment.toLowerCase() + "/nt-test-20150714/as-smoketest/prod/utag.js"
+         as_url = "//tags.tiqcdn.com/" + environment + "/nt-test-20150714/as-smoketest/prod/utag.js"
+         if (environment == "prod" || environment == "live") {
+            as_url = "//tags.tiqcdn.com/utag/nt-test-20150714/as-smoketest/prod/utag.js"
+         }
       </script>
       <script type="text/javascript">
          var utag_data = {
