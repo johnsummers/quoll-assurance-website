@@ -49,6 +49,9 @@
             environment = "Undefined";
          }
          as_url = "//tags.tiqcdn.com/" + environment.toLowerCase() + "/qa-audiencestream/regression/prod/utag.js"
+         if (environment == "prod" || environment == "live") {
+            as_url = "//tags.tiqcdn.com/utag/qa-audiencestream/regression/prod/utag.js"
+         }
       </script>
       <script type="text/javascript">
          var utag_data = {
