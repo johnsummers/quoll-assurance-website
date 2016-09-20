@@ -65,9 +65,9 @@
       </script>
       <script type="text/javascript">
          var env_query = vars['environment'];
-         var account - "";
+         var account = "";
          if (env_query != undefined) {
-            environment = env_query;
+            environment = env_query.toLowerCase();
             account = environment.toLowerCase() + "-redis-smoke";
          } else {
             environment = "Undefined";
@@ -134,7 +134,7 @@
          <script type="text/javascript">
             $( "#test-banner" ).html( environment.toUpperCase() + " - Redis Regression Test for " + dbname.toUpperCase());
             $( "#test-header" ).html( "HOME Page - " + environment.toUpperCase());
-            $( "#test-path" ).html( "Test page for qa-redis-regression/" + profile.toLowerCase());
+            $( "#test-path" ).html( "Test page for " + account  + "/" + profile.toLowerCase());
          </script>
       </div>
    </body>
