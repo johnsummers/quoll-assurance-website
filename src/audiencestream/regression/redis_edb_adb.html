@@ -51,7 +51,7 @@
               break;
             case 'edb':
               header_text = "EDB Regression Test";
-              profile = "edb";
+              profile = "edb-only";
               break;
             default:
               header_text = "Undefined";
@@ -69,7 +69,7 @@
          var account = "";
          if (env_query != undefined) {
             environment = env_query.toLowerCase();
-            account = environment.toLowerCase() + "-redissmoke";
+            account = environment.toLowerCase() + "-redis-smoke";
          } else {
             environment = "Undefined";
          }
