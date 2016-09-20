@@ -72,7 +72,7 @@
          } else {
             environment = "Undefined";
          }
-         as_url = "//tags.tiqcdn.com/" + environment.toLowerCase() + "/" + account + "/" + profile.toLowerCase() + "/prod/utag.js"
+         as_url = "//tags.tiqcdn.com/" + environment + "/" + account + "/" + profile.toLowerCase() + "/prod/utag.js"
       </script>
       <script type="text/javascript">
          var utag_data = {
@@ -129,12 +129,14 @@
          <div class="textBox">
             <h1 id="test-header"></h1>
             <p id="test-path">pookie</p>
+            <p id="tag-path">pookie</p>
             <span id="cmod"></span>
          </div>
          <script type="text/javascript">
             $( "#test-banner" ).html( environment.toUpperCase() + " - Redis Regression Test for " + dbname.toUpperCase());
             $( "#test-header" ).html( "HOME Page - " + environment.toUpperCase());
             $( "#test-path" ).html( "Test page for " + account  + "/" + profile.toLowerCase());
+            $( "#tag-path" ).html("Tag url: " + as_url);
          </script>
       </div>
    </body>
