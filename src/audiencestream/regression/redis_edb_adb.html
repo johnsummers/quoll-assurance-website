@@ -65,12 +65,14 @@
       </script>
       <script type="text/javascript">
          var env_query = vars['environment'];
+         var account - "";
          if (env_query != undefined) {
             environment = env_query;
+            account = environment.toLowerCase() + "-redis-smoke";
          } else {
             environment = "Undefined";
          }
-         as_url = "//tags.tiqcdn.com/" + environment.toLowerCase() + "/qa-redis-regression/" + profile.toLowerCase() + "/prod/utag.js"
+         as_url = "//tags.tiqcdn.com/" + environment.toLowerCase() + "/" + account + "/" + profile.toLowerCase() + "/prod/utag.js"
       </script>
       <script type="text/javascript">
          var utag_data = {
