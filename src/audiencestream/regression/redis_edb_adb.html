@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <title>Redis Test</title>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script>
          $(function() {
          });
@@ -51,12 +51,13 @@
               break;
             case 'edb':
               header_text = "EDB Regression Test";
-              profile = "edb-only";
+              profile = "edb";
               break;
             default:
               header_text = "Undefined";
               profile = "Undefined";
           }
+          profile = profile.toLowerCase();
         } else {
             header_text = "Undefined";
             profile = "Undefined";
@@ -68,11 +69,11 @@
          var account = "";
          if (env_query != undefined) {
             environment = env_query.toLowerCase();
-            account = environment.toLowerCase() + "-redis-smoke";
+            account = environment.toLowerCase() + "-redissmoke";
          } else {
             environment = "Undefined";
          }
-         as_url = "//tags.tiqcdn.com/" + environment + "/" + account + "/" + profile.toLowerCase() + "/prod/utag.js"
+         as_url = "//tags.tiqcdn.com/" + environment + "/" + account + "/" + profile + "/prod/utag.js"
       </script>
       <script type="text/javascript">
          var utag_data = {
