@@ -27,7 +27,7 @@
       </style>
    </head>
    <body>
-      <script type="text/javascript">var vars = [], hash;</script>
+      <script type="text/javascript">var vars = [], hash; var set_email = false;</script>
       <script type="text/javascript">
          var q = document.URL.split('?')[1];
          var header_text = "Undefined";
@@ -40,18 +40,23 @@
             }
          }
       </script>
-      <script type="text/javascript">var dbname = "";var environment = "";var profile = ""; var as_url = ""</script>
+      <script type="text/javascript">var dbname = ""; var email = "";var environment = "";var profile = ""; var as_url = ""</script>
       <script type="text/javascript">
         dbname = vars['db'];
+        email = vars['email'];
         if(dbname != undefined){
           switch (dbname) {
             case 'adb':
               header_text = "ADB Regression Test";
               profile = "adb-only";
+              if (email != undefined){
+                set_email = true;
+              }
               break;
             case 'edb':
               header_text = "EDB Regression Test";
               profile = "edb-only";
+              set_email = true;
               break;
             default:
               header_text = "Undefined";
@@ -115,7 +120,9 @@
             customer_country : "USA", // Contains the country portion of the customer's address.
             _dc_ttl_: "60000" //Force Visitors to Expire in a < 2 minutes
          }
-         utag_data.customer_email = "tealiumtest"+Math.floor(Math.random()*(1-(10000000000+1))+(1000000000000+1))+"@tealiumtest.com"
+         if(set_email) {
+            utag_data.customer_email = "tealiumtest"+Math.floor(Math.random()*(1-(10000000000+1))+(1000000000000+1))+"@tealiumtest.com"
+         }
       </script>
       <!-- Loading script asynchronously -->
       <script type="text/javascript">
