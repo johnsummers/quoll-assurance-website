@@ -138,6 +138,7 @@
             <h1 id="test-header"></h1>
             <p id="test-path">pookie</p>
             <p id="tag-path">pookie</p>
+            <p id="visitor">pookie</p>
             <span id="cmod"></span>
          </div>
          <script type="text/javascript">
@@ -145,6 +146,12 @@
             $( "#test-header" ).html( "HOME Page - " + environment.toUpperCase());
             $( "#test-path" ).html( "Test page for " + account  + "/" + profile.toLowerCase());
             $( "#tag-path" ).html("Tag url: " + as_url);
+            if(set_email) { 
+              $( "#visitor" ).html("Visitor: " + utag_data.customer_email); 
+            } 
+            else { 
+              $( "#visitor" ).html("Visitor: Anonymous"); 
+            }
          </script>
       </div>
    </body>
